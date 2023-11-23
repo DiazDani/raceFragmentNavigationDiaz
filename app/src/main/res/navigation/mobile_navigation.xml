@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.sopa.racefragmentnavigation.Fragment2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2" >
+        <action
+            android:id="@+id/action_fragment2_to_fragment3"
+            app:destination="@id/fragment3"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_fragment2_to_fragment4"
+            app:destination="@id/fragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="com.sopa.racefragmentnavigation.Fragment3"
+        android:label="fragment_3"
+        tools:layout="@layout/fragment_3" >
+        <action
+            android:id="@+id/action_fragment3_to_fragment4"
+            app:destination="@id/fragment4" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.sopa.racefragmentnavigation.Fragment4"
+        android:label="fragment_4"
+        tools:layout="@layout/fragment_4" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sopa.racefragmentnavigation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_fragment2"
+            app:destination="@id/fragment2" />
+    </fragment>
+</navigation>
